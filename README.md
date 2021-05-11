@@ -69,7 +69,13 @@ step2: 把`根目录\pipeline_zqw\environment.yml`拷贝到个人用户目录下
  conda env create -f environment.yml
 ```
 
-然后等待安装完成
+然后等待安装完成，切换环境名称为`fish_proc`
+
+```bash
+conda activate fish_proc
+```
+
+
 
 step3: 安装[fish](https://github.com/d-v-b/fish)分析包,。把`根目录\pipeline_zqw\backup\fish`文件夹拷贝到独立目录下，在搜索栏打开`Anaconda Prompt(miniconda3)`的命令行界面进入`fish`文件夹，输入命令
 
@@ -99,7 +105,7 @@ python setup.py install
 
 ### CNN
 
-参考：https://haogao1996.github.io/hg_gitbook/Methods/CellSegmentation/CNN.html
+参考：https://mulab2020.github.io/hg_gitbook/Methods/CellSegmentation/CNN.html
 
 ## Registration
 
@@ -107,7 +113,7 @@ python setup.py install
 
 ## Ephys
 
-10.10.49.10\Alumni\hgao\PJ\zebrafish\zebrafish\fishEphys
+根目录\zebrafish\zebrafish\fishEphys
 
 ### Stim
 
@@ -145,7 +151,7 @@ Time-delayed
 
 ## Python Available Pkgs
 
-https://haogao1996.github.io/hg_gitbook/Coding/Python/PythonAvailablePackages.html
+https://mulab2020.github.io/hg_gitbook/Coding/Python/PythonAvailablePackages.html
 
 > - dask
 > - numpy
