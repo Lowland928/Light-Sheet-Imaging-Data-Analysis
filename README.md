@@ -147,5 +147,18 @@ Time-delayed
 
 https://mulab2020.github.io/hg_gitbook/Coding/Python/PythonAvailablePackages.html
 
+### Highlight
+
 > - dask
 > - numpy
+> - dipy
+> - skimage
+> - hdf5
+> - matplotlib
+> - seaborn
+> - sklearn
+> - glob
+> - os
+> - os.path
+> - functools
+
