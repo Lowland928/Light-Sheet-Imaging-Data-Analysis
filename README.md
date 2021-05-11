@@ -113,13 +113,7 @@ python setup.py install
 
 ## Ephys
 
-根目录\zebrafish\zebrafish\fishEphys
-
-### Stim
-
-### Camera
-
-### Swim
+`根目录\zebrafish\zebrafish\fishEphys`，该代码主要是针对contrast实验数据的分析，对于其它实验可能需要对代码进行修改。具体参数表示可以参照`根目录\others`文件夹下两个视频。
 
 ## Signal Analysis
 
