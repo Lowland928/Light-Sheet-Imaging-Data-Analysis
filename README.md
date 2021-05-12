@@ -128,16 +128,16 @@ step3: 拷贝原始流程notebook到`根目录\pipeline_zqw\test_pipeline.ipynb`
 step4: 此时可以在notebook网页中进入`Jupyter`文件夹可以看到`test_pipeline`notebook，点击进去修改第二个block中的路径位置如下:
 
 ```python
-dir_root = 'E:/MuLab/ldy/Data/expname/raw/'
-savetmp = 'E:/MuLab/ldy/Data/expname/savetmp'
+dir_root = 'E:/MuLab/ldy/Data/expname/raw/' #修改原始数据路径
+savetmp = 'E:/MuLab/ldy/Data/expname/savetmp' # 修改生成数据路径
 save_root = savetmp
-cameraNoiseMat = 'E:/MuLab/ldy/Data/expname/gainMat20180208'
+cameraNoiseMat = 'E:/MuLab/ldy/Data/expname/gainMat20180208' # 修改额外数据路径
 files = sorted(glob(dir_root+'/*.h5'))
 # print(files)
 chunks = File(files[0],'r')['default'].shape
 nsplit = (chunks[1]//64, chunks[2]//64)
 num_t_chunks = 2
-dask_tmp = 'E:/MuLab/ldy/Data/expname/dask-worker-sapce'
+dask_tmp = 'E:/MuLab/ldy/Data/expname/dask-worker-sapce' # 修改dask-worker日志文件路径
 memory_limit = 0 # unlimited
 down_sample_registration = 3
 baseline_percentile = 20
