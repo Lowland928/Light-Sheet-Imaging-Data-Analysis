@@ -58,6 +58,8 @@ env.depth = size(tiffStack, 3);
 
 ## Fish_proc (ziqiang wei)
 
+如果想优化该代码，祝你好运\^_^
+
 ### 环境配置
 
 **下面以李丹阳的个人目录为例子说明: `C:\Users\danyangl`表示李丹阳的用户目录，`E:\MuLab\ldy`表示李丹阳的工作目录。**
@@ -144,7 +146,7 @@ baseline_percentile = 20
 baseline_window = 1000   # number of frame
 ```
 
-step5: 运行所有的blocks，直到完成。在个人的共组目录`E:\MuLab\ldy\Data\expname\savetmp`下会有一系列的生成文件，其中[`cell_raw_dff`包含分割后的细胞空间和时间信息](https://mulab2020.github.io/hg_gitbook/Others/Pipeline/)。
+step5: 运行所有的blocks，直到完成。在个人的工作目录`E:\MuLab\ldy\Data\expname\savetmp`下会有一系列的生成文件，其中[`cell_raw_dff`包含分割后的细胞空间和时间信息](https://mulab2020.github.io/hg_gitbook/Others/Pipeline/)。
 
 ## CNN
 
