@@ -60,50 +60,91 @@ env.depth = size(tiffStack, 3);
 
 ##### 环境配置
 
-step1: 首先安装miniconda，**其中miniconda安装选择个人使用，一定不能选择所有用户**
+**下面以李丹阳的个人目录为例子说明: `C:\Users\danyangl`表示李丹阳的用户目录，`E:\MuLab\ldy`表示李丹阳的工作目录。**
+
+step1: 首先下载安装[miniconda](https://docs.conda.io/en/latest/miniconda.html)。注意：**其中miniconda安装选择个人使用，一定不能选择所有用户！！！！！！！！！！！！！**
 
 
-step2: 把`根目录\pipeline_zqw\environment.yml`拷贝到个人用户目录下面`C:\Users\danyangl`，在搜索栏打开`Anaconda Prompt(miniconda3)`的命令行界面，输入命令
+step2: 把`根目录\pipeline_zqw\environment.yml`拷贝到个人的用户目录下面`C:\Users\danyangl`，在搜索栏打开`Anaconda Prompt(miniconda3)`的命令行界面，输入命令
 
 ```bash
  conda env create -f environment.yml
 ```
 
-然后等待安装完成，切换环境名称为`fish_proc`
+等待所有软件包安装完成。然后使用下述命令切换到工作环境`fish_proc`
 
 ```bash
 conda activate fish_proc
 ```
 
-step3: 安装[fish](https://github.com/d-v-b/fish)分析包,。把`根目录\pipeline_zqw\backup\fish`文件夹拷贝到user目录下，在Anaconda Prompt(miniconda3)的命令行界面输入`cd fish`进入`fish`文件夹，输入命令
+step3: 安装[fish](https://github.com/d-v-b/fish)分析包。把`根目录\pipeline_zqw\backup\fish`文件夹拷贝到个人的用户目录下，在Anaconda Prompt(miniconda3)的命令行界面输入`cd fish`进入`fish`文件夹，输入命令
 
 ```bash
 python setup.py build
 python setup.py install
 ```
 
-然后把`根目录\pipeline_zqw\backup\fish\fish`文件夹下所有内容拷贝到`C:\Users\personalusername\miniconda3\envs\fish_proc\Lib\site-packages\fish-0.1-py3.8.egg\fish`。
+然后把`根目录\pipeline_zqw\backup\fish\fish`文件夹下所有内容拷贝到`C:\Users\personalusername\miniconda3\envs\fish_proc\Lib\site-packages\fish-0.1-py3.8.egg\fish`。同时，在Anaconda Prompt(miniconda3)的命令行界面返回到上级目录`cd ..`。
 
-step4: 安装[修改后的fish_proc](https://github.com/zqwei/fish_processing)分析包。把`根目录\pipeline_zqw\backup\fish_proc`文件夹拷贝到user目录下，在Anaconda Prompt(miniconda3)的命令行界面输入`cd fish_proc`进入`fish_proc`文件夹，输入命令
+step4: 安装[修改后的fish_proc](https://github.com/zqwei/fish_processing)分析包。把`根目录\pipeline_zqw\backup\fish_proc`文件夹拷贝到个人的用户目录下，在Anaconda Prompt(miniconda3)的命令行界面输入`cd fish_proc`进入`fish_proc`文件夹，输入命令
 
 ```ba
 python setup.py build
 python setup.py install
 ```
 
-**然后把`根目录\pipeline_zqw\fish_processing\fish_proc`文件夹下所有内容拷贝到**`C:\Users\hgao.WHPC-MULAB\miniconda3\envs\fish_proc\Lib\site-packages\fish_proc-1.0-py3.8.egg\fish_proc`
+**然后把`根目录\pipeline_zqw\fish_processing\fish_proc`文件夹下所有内容拷贝到**`C:\Users\hgao.WHPC-MULAB\miniconda3\envs\fish_proc\Lib\site-packages\fish_proc-1.0-py3.8.egg\fish_proc`。同时，在Anaconda Prompt(miniconda3)的命令行界面返回到上级目录`cd ..`。
 
-基于以上步骤基本上配置完成数据分析环境。
+以上，完成环境的配置。
 
 ##### 数据存放要求
 
-每个人必须建立一个Data文件夹，为每次实验数据创建一个文件夹，其下有(I)raw: 存放原始数据文件；(II)gainMat20180208 : 从`根目录\pipeline_zqw\Data\gainMat20180208`拷贝
+step1: 个人的工作目录`E:\MuLab\ldy`下建立一个Data文件夹`E:\MuLab\ldy\Data`。
 
-运行结束核心生成文件夹为: `.\Data\savetmp\cell_raw_dff`，其中包含了分割后神经元相关数据
+step2: 创建一个文件夹用于存放实验数据`E:\MuLab\ldy\Data\expname`。
+
+step3: 拷贝原始数据到文件夹raw下面：`E:\MuLab\ldy\Data\expname\raw`。其中会包括实验室参数文件`ch0.xml`和一系列的`*.h5`的数据文件。
+
+step4: 从`根目录\pipeline_zqw\Data\gainMat20180208`拷贝到文件夹`E:\MuLab\ldy\Data\expname`下面。
 
 ##### 测试流程
 
-，然后键入jupyter notebook可以使用`根目录\pipeline_zqw\fish_processing\fish_proc\test_pipeline.ipy`做测试。
+step1: [搭建jupyter notebook环境](https://mulab2020.github.io/hg_gitbook/Coding/Python/JupyterNotebookKernels.html)
+
+step1.1: Anaconda Prompt(miniconda3)的命令行界面的`fish_proc`工作环境下输入`jupyter notebook --generate-config`。
+
+step1.2: 在个人的用户目录下`C:\Users\danyangl\.jupyter`会生成`jupyter_notebook_config.py`文件，右击使用`notepad++`打开。
+
+step1.3: 创建个人的jupyter工作文件夹`E:\MuLab\ldy\Jupyter`。
+
+step1.4: 取消`#c.NotebookApp.notebook_dir = ''` 的注释，并且加入个人的Jupyter工作目录`c.NotebookApp.notebook_dir = 'E:\\MuLab\\ldy\\Jupyter\\'。`
+
+step1.5: 输入`jupyter notebook`即可。
+
+step2: 拷贝测试数据`根目录\pipeline_zqw\Data\raw`和`根目录\pipeline_zqw\Data\gainMat20180208`到个人的工作目录的Data文件夹下`E:\MuLab\ldy\Data\expname`。
+
+step3: 拷贝原始流程notebook到`根目录\pipeline_zqw\test_pipeline.ipynb`到个人的工作目录jupyter文件夹下面`E:\MuLab\ldy\Jupyter`。
+
+step4: 此时可以在notebook网页中进入`Jupyter`文件夹可以看到`test_pipeline`notebook，点击进去修改第二个block中的路径位置如下:
+
+```python
+dir_root = 'E:/MuLab/ldy/Data/expname/raw/'
+savetmp = 'E:/MuLab/ldy/Data/expname/savetmp'
+save_root = savetmp
+cameraNoiseMat = 'E:/MuLab/ldy/Data/expname/gainMat20180208'
+files = sorted(glob(dir_root+'/*.h5'))
+# print(files)
+chunks = File(files[0],'r')['default'].shape
+nsplit = (chunks[1]//64, chunks[2]//64)
+num_t_chunks = 2
+dask_tmp = 'E:/MuLab/ldy/Data/expname/dask-worker-sapce'
+memory_limit = 0 # unlimited
+down_sample_registration = 3
+baseline_percentile = 20
+baseline_window = 1000   # number of frame
+```
+
+step5: 运行所有的blocks，直到完成。在个人的共组目录`E:\MuLab\ldy\Data\expname\savetmp`下会有一系列的生成文件，其中[`cell_raw_dff`包含分割后的细胞空间和时间信息](https://mulab2020.github.io/hg_gitbook/Others/Pipeline/)。
 
 ### CNN
 
