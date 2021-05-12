@@ -75,9 +75,7 @@ step2: 把`根目录\pipeline_zqw\environment.yml`拷贝到个人用户目录下
 conda activate fish_proc
 ```
 
-
-
-step3: 安装[fish](https://github.com/d-v-b/fish)分析包,。把`根目录\pipeline_zqw\backup\fish`文件夹拷贝到独立目录下，在搜索栏打开`Anaconda Prompt(miniconda3)`的命令行界面进入`fish`文件夹，输入命令
+step3: 安装[fish](https://github.com/d-v-b/fish)分析包,。把`根目录\pipeline_zqw\backup\fish`文件夹拷贝到user目录下，在Anaconda Prompt(miniconda3)的命令行界面输入`cd fish`进入`fish`文件夹，输入命令
 
 ```bash
 python setup.py build
@@ -86,7 +84,7 @@ python setup.py install
 
 然后把`根目录\pipeline_zqw\backup\fish\fish`文件夹下所有内容拷贝到`C:\Users\personalusername\miniconda3\envs\fish_proc\Lib\site-packages\fish-0.1-py3.8.egg\fish`。
 
-step4: 安装[修改后的fish_proc](https://github.com/zqwei/fish_processing)分析包。把`根目录\pipeline_zqw\backup\fish_proc`文件夹拷贝到独立目录下，搜索栏打开`Anaconda Prompt(miniconda3)`的命令行界面进入`fish_proc`文件夹，输入命令
+step4: 安装[修改后的fish_proc](https://github.com/zqwei/fish_processing)分析包。把`根目录\pipeline_zqw\backup\fish_proc`文件夹拷贝到user目录下，在Anaconda Prompt(miniconda3)的命令行界面输入`cd fish_proc`进入`fish_proc`文件夹，输入命令
 
 ```ba
 python setup.py build
@@ -95,13 +93,17 @@ python setup.py install
 
 **然后把`根目录\pipeline_zqw\fish_processing\fish_proc`文件夹下所有内容拷贝到**`C:\Users\hgao.WHPC-MULAB\miniconda3\envs\fish_proc\Lib\site-packages\fish_proc-1.0-py3.8.egg\fish_proc`
 
-基于以上步骤基本上配置完成数据分析环境
+基于以上步骤基本上配置完成数据分析环境。
 
 ##### 数据存放要求
 
 每个人必须建立一个Data文件夹，为每次实验数据创建一个文件夹，其下有(I)raw: 存放原始数据文件；(II)gainMat20180208 : 从`根目录\pipeline_zqw\Data\gainMat20180208`拷贝
 
 运行结束核心生成文件夹为: `.\Data\savetmp\cell_raw_dff`，其中包含了分割后神经元相关数据
+
+##### 测试流程
+
+，然后键入jupyter notebook可以使用`根目录\pipeline_zqw\fish_processing\fish_proc\test_pipeline.ipy`做测试。
 
 ### CNN
 
