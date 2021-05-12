@@ -1,22 +1,22 @@
 # Light Sheet Imaging Data Analysis 
 
-参考：https://mulab2020.github.io/hg_gitbook//Methods/ (后面转到Mulab.github上)
+参考：https://mulab2020.github.io/hg_gitbook//Methods/ 
 
 高昊的项目目录：`10.10.49.10\Alumni\hgao\PJ`(**后面都称为根目录**)
 
-## Overview
+# Overview
 
 两张图: 细胞分割流程示意图和数据分析示意图
 
-## Cell Segmentation
+# Cell Segmentation
 
-### Registration
+## Registration
 
-### 核定位
+## 核定位
 
 参考：https://mulab2020.github.io/hg_gitbook/Methods/CellSegmentation/%E6%A0%B8%E5%AE%9A%E4%BD%8D.html
 
-#### Matlab (yuqi zhu)
+## Matlab (yuqi zhu)
 
 `根目录\Ca_img_processing_tiff_brief\Extract_roi_demo_hgao.m`
 
@@ -52,13 +52,13 @@ env.depth = size(tiffStack, 3);
 - **最好使用100帧以上的平均数据**
 - 如果有更高的分割需求，可以参照`根目录\Ca_img_processing_tiff_brief\Cacium_pipeline_demo_zyq.m`
 
-### CNMF
+## CNMF
 
 参考：https://mulab2020.github.io/hg_gitbook/Methods/CellSegmentation/CNMF.html
 
-#### Fish_proc (ziqiang wei)
+## Fish_proc (ziqiang wei)
 
-##### 环境配置
+### 环境配置
 
 **下面以李丹阳的个人目录为例子说明: `C:\Users\danyangl`表示李丹阳的用户目录，`E:\MuLab\ldy`表示李丹阳的工作目录。**
 
@@ -97,7 +97,7 @@ python setup.py install
 
 以上，完成环境的配置。
 
-##### 数据存放要求
+### 数据存放要求
 
 step1: 个人的工作目录`E:\MuLab\ldy`下建立一个Data文件夹`E:\MuLab\ldy\Data`。
 
@@ -107,7 +107,7 @@ step3: 拷贝原始数据到文件夹raw下面：`E:\MuLab\ldy\Data\expname\raw`
 
 step4: 从`根目录\pipeline_zqw\Data\gainMat20180208`拷贝到文件夹`E:\MuLab\ldy\Data\expname`下面。
 
-##### 测试流程
+### 测试流程
 
 step1: [搭建jupyter notebook环境](https://mulab2020.github.io/hg_gitbook/Coding/Python/JupyterNotebookKernels.html)
 
@@ -146,51 +146,51 @@ baseline_window = 1000   # number of frame
 
 step5: 运行所有的blocks，直到完成。在个人的共组目录`E:\MuLab\ldy\Data\expname\savetmp`下会有一系列的生成文件，其中[`cell_raw_dff`包含分割后的细胞空间和时间信息](https://mulab2020.github.io/hg_gitbook/Others/Pipeline/)。
 
-### CNN
+## CNN
 
 参考：https://mulab2020.github.io/hg_gitbook/Methods/CellSegmentation/CNN.html
 
-## Registration
+# Registration
 
 由Xinlan Liu后期补充
 
-## Ephys
+# Ephys
 
 `根目录\zebrafish\zebrafish\fishEphys`，该代码主要是针对contrast实验数据的分析，对于其它实验可能需要对代码进行修改。具体参数表示可以参照`根目录\others`文件夹下两个视频。
 
-## Signal Analysis
+# Signal Analysis
 
-### DF/F
+## DF/F
 
-### 粗分类
+## 粗分类
 
 sensory sensory-motor motor noise intermediate sparse
 
-#### Whole-Signal Analysis(粗分类)
+### Whole-Signal Analysis(粗分类)
 
-#### Trial-by-Trial Analysis(粗分类)
+### Trial-by-Trial Analysis(粗分类)
 
-### Clustering(精分类)
+## Clustering(精分类)
 
-### Sequential Activity(看顺序)
+## Sequential Activity(看顺序)
 
 Time-delayed 
 
-### Structural mapping 
+## Structural mapping 
 
-## Visualization
+# Visualization
 
-### Map
+## Map
 
-### Animator
+## Animator
 
-### Interaction
+## Interaction
 
-## Python Available Pkgs
+# Python Available Pkgs
 
 https://mulab2020.github.io/hg_gitbook/Coding/Python/PythonAvailablePackages.html
 
-### Highlight
+## Highlight
 
 > - dask
 > - numpy
